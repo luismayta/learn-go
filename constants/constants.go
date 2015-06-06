@@ -10,7 +10,7 @@ const (
 )
 
 func main() {
-    fmt.Printf("Value Pi %f", Pi)
-    fmt.Printf("Value StatusOk %d", StatusOk)
-    fmt.Printf("Value StatusNotFound %d", StatusNotFound)
+    fmt.Println("Value Pi %f", Pi)
+    fmt.Println("Value StatusOk %d", StatusOk)
+    fmt.Println("Value StatusNotFound %d", StatusNotFound)
 }
