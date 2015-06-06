@@ -3,13 +3,11 @@ package main
 import "fmt"
 
 var (
-	name string
+	name, location string
 	age int
-	location string
 )
 
 func main(){
-	name, location := "name", "location"
-	fmt.Printf(name)
-	fmt.Printf(location)
+	name, location := "itachi", "konoha"
+	fmt.Printf("%s of %s", name, location)
 }
