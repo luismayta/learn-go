@@ -7,6 +7,7 @@ import (
 
 const (
 	pi = 3.1416
+	A
 	piTambien
 	igualApi
 )
