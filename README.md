@@ -1,4 +1,4 @@
-# Examples Go
+# Golang Examples
 
 <span class="badges">
 [![Stories in Ready](https://badge.waffle.io/luismayta/examples-go.svg?label=ready&title=Ready)](http://waffle.io/luismayta/examples-go)
