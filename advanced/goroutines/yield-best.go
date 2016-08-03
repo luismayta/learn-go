@@ -2,13 +2,13 @@ package main
 
 import "fmt"
 
-func fib (n int) chan int {
+func fib(n int) chan int {
 	C := make(chan int)
 
-	go func(){
+	go func() {
 		a, b := 0, 1
-		for i :=0; i < n; i++ {
-			a, b = b, a + b
+		for i := 0; i < n; i++ {
+			a, b = b, a+b
 			C <- a
 		}
 		close(C)
@@ -16,9 +16,8 @@ func fib (n int) chan int {
 	return C
 }
 
-
 func main() {
-	for x := range(fib(10)){
+	for x := range fib(10) {
 		fmt.Println(x)
 	}
 }
