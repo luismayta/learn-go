@@ -1,5 +1,5 @@
 -   repo: git@github.com:pre-commit/pre-commit-hooks
-    sha: master
+    sha: 3fa02652357ff0dbb42b5bc78c673b7bc105fcf3
     hooks:
     -   id: detect-private-key
         files: ^(?!\.?git-crypt)
@@ -23,10 +23,10 @@
     -   id: requirements-txt-fixer
     -   id: name-tests-test
 -   repo: git://github.com/dnephin/pre-commit-golang
-    sha: master
+    sha: 9777e14eafc8fadf3429c66d2e0b7e85613bdc6e
     hooks:
-      - id: go-fmt
-      - id: go-vet
-      - id: go-lint
-      - id: validate-toml
-      - id: no-go-testing
+    -   id: go-fmt
+    -   id: go-vet
+    -   id: go-lint
+    -   id: validate-toml
+    -   id: no-go-testing
