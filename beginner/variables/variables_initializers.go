@@ -1,13 +1,21 @@
 package main
 
-import "fmt"
+import (
+	"fmt"
+)
 
 var (
-	name     string = "Luis Mayta"
-	age      int    = 30
-	location string = "Lima - Peru"
+	name     = "Luis Mayta"
+	age      = 30
+	location = "Lima - Peru"
+	alias    = "Itachi uchiha"
 )
 
 func main() {
-	fmt.Printf("%s have %d from %s", name, age, location)
+	fmt.Printf("%s have %d from %s alias %s",
+		name,
+		age,
+		location,
+		alias,
+	)
 }
