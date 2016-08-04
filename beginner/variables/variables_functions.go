@@ -1,12 +1,13 @@
 package main
 
-import "fmt"
+import (
+	"fmt"
+)
 
-anonima := func() {
-    fmt.Printf("Itachi Uchiha")
+var anonima = func() {
+	fmt.Printf("Itachi Uchiha")
 }
 
 func main() {
-    anonima()
-    //fmt.Printf("I Am %s", anonima())
+	anonima()
 }
