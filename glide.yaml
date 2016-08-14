@@ -1,0 +1,5 @@
+package: .
+import:
+- package: github.com/mattetti/goRailsYourself
+  subpackages:
+  - /crypto
