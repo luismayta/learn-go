@@ -1,20 +1,16 @@
 hash: ba2292860ccfa988aab7e236afd86558638b89607b0863aa75f0b5383f598043
-updated: 2016-08-14T00:45:33.099619491-05:00
+updated: 2016-08-14T00:51:53.819611479-05:00
 imports:
 - name: github.com/fiam/gounidecode
   version: 8deddbd03fec2c28969266e52f27b6fb22be1823
-  repo: https://github.com/fiam/gounidecode
 - name: github.com/mattetti/goRailsYourself
   version: 540d176560cd8178185bb65a4c6ab672d576cb51
   subpackages:
   - /crypto
 - name: golang.org/x/crypto
   version: a548aac93ed489257b9d959b40fe1e8c1e20778c
-  repo: https://golang.org/x/crypto
 - name: golang.org/x/net
   version: 07b51741c1d6423d4a6abab1c49940ec09cb1aaf
-  repo: https://golang.org/x/net
 - name: golang.org/x/text
   version: 2910a502d2bf9e43193af9d68ca516529614eed3
-  repo: https://golang.org/x/text
 devImports: []
