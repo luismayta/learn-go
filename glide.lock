@@ -1,8 +1,12 @@
-hash: ba2292860ccfa988aab7e236afd86558638b89607b0863aa75f0b5383f598043
-updated: 2016-08-14T00:51:53.819611479-05:00
+hash: b403e49eb188dc7f86b7f0c04b981a58e2808fd6bf153a97ebab2e61f55c3209
+updated: 2016-08-14T01:24:34.595922837-05:00
 imports:
 - name: github.com/fiam/gounidecode
   version: 8deddbd03fec2c28969266e52f27b6fb22be1823
+- name: github.com/golang/lint
+  version: c7bacac2b21ca01afa1dee0acf64df3ce047c28f
+  subpackages:
+  - /golint
 - name: github.com/mattetti/goRailsYourself
   version: 540d176560cd8178185bb65a4c6ab672d576cb51
   subpackages:
@@ -13,4 +17,6 @@ imports:
   version: 07b51741c1d6423d4a6abab1c49940ec09cb1aaf
 - name: golang.org/x/text
   version: 2910a502d2bf9e43193af9d68ca516529614eed3
+- name: golang.org/x/tools
+  version: 0e9f43fcb67267967af8c15d7dc54b373e341d20
 devImports: []
