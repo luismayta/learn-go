@@ -1,11 +1,14 @@
 # Golang Examples
 
 <span class="badges">
-[![Stories in Ready](https://badge.waffle.io/luismayta/examples-go.svg?label=ready&title=Ready)](http://waffle.io/luismayta/examples-go)
-[![GitHub issues](https://img.shields.io/github/issues/luismayta/examples-go.svg)](https://github.com/luismayta/examples-go/issues)
-[![GitHub forks](https://img.shields.io/github/forks/luismayta/examples-go.svg)](https://github.com/luismayta/examples-go)
-[![GitHub stars](https://img.shields.io/github/stars/luismayta/examples-go.svg)](https://github.com/luismayta/examples-go)
+[![Code Climate](https://codeclimate.com/github/luismayta/golang-examples/badges/gpa.svg)](https://codeclimate.com/github/luismayta/golang-examples)
+[![GitHub issues](https://img.shields.io/github/issues/luismayta/golang-examples.svg)](https://github.com/luismayta/golang-examples/issues)
+[![GitHub forks](https://img.shields.io/github/forks/luismayta/golang-examples.svg)](https://github.com/luismayta/golang-examples)
+[![GitHub stars](https://img.shields.io/github/stars/luismayta/golang-examples.svg)](https://github.com/luismayta/golang-examples)
+[![Issue Count](https://codeclimate.com/github/luismayta/golang-examples/badges/issue_count.svg)](https://codeclimate.com/github/luismayta/golang-examples)
 [![license](https://img.shields.io/github/license/mashape/apistatus.svg?style=flat-square)](LICENSE)
+[![Stories in Ready](https://badge.waffle.io/luismayta/golang-examples.svg?label=ready&title=Ready)](http://waffle.io/luismayta/golang-examples)
+[![Test Coverage](https://codeclimate.com/github/luismayta/golang-examples/badges/coverage.svg)](https://codeclimate.com/github/luismayta/golang-examples/coverage)
 </span>
 
 ## Changelog
@@ -24,8 +27,8 @@ Please see [CONTRIBUTING](CONTRIBUTING.md) for details.
 <span class="badges">
 [![](http://api.coderwall.com/luismayta/endorsecount.png)](http://coderwall.com/luismayta)
 [![](http://www.linkedin.com/img/webpromo/btn_liprofile_blue_80x15.png)](http://pe.linkedin.com/in/luismayta)
-[![](https://ga-beacon.appspot.com/UA-65019326-1/examples-go/readme)](https://github.com/luismayta/examples-go)
-[![Bitdeli Badge](https://d2weczhvl823v0.cloudfront.net/luismayta/examples-go/trend.png)](https://bitdeli.com/free "Bitdeli Badge")
+[![](https://ga-beacon.appspot.com/UA-65019326-1/golang-examples/readme)](https://github.com/luismayta/golang-examples)
+[![Bitdeli Badge](https://d2weczhvl823v0.cloudfront.net/luismayta/golang-examples/trend.png)](https://bitdeli.com/free "Bitdeli Badge")
 </span>
 
 
