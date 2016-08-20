@@ -3,7 +3,7 @@ package main
 import (
 	"encoding/json"
 	"fmt"
-	// "io/ioutil"
+	"io/ioutil"
 )
 
 // Person Struct for example json
@@ -21,5 +21,25 @@ func main() {
 	if err := json.Unmarshal([]byte(jsonStr), &person); err != nil {
 		fmt.Println("Error Parsing Json", err)
 	}
+
 	fmt.Printf("Name: %v, City: %v\n", person.Name, person.City)
+	file, err := ioutil.ReadFile("./beginner/json/extras/names.json")
+
+	if err != nil {
+		fmt.Println("Error parsing json", err)
+	}
+
+	if err := json.Unmarshal(file, &people); err != nil {
+		fmt.Println("Error parsing json", err)
+	}
+
+	fmt.Println(people)
+
+	response, err := json.Marshal(people)
+	if err != nil {
+		fmt.Println("Error enconding json")
+	}
+
+	fmt.Println(string(response))
+
 }
