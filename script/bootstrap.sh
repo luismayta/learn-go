@@ -8,6 +8,9 @@ PYENV_NAME="${PROJECT_NAME}"
 GVM_NAME="${PROJECT_NAME}"
 GVM_PATHS_NAME="{src, pkg, bin}"
 
+RVM_NAME="${PROJECT_NAME}"
+RVM_VERSION=2.0.0
+RVM_PATHS_NAME="{src, pkg, bin}"
 # Vars Dir
 ROOT_DIR="`pwd`"
 RESOURCES_DIR="$ROOT_DIR/resources"
