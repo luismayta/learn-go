@@ -83,3 +83,4 @@ target/
 # ignored files Vagrant
 .vagrant
 vendor
+.env

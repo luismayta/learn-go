@@ -6,10 +6,11 @@ tmux_options: -2
 # socket_name: foo
 
 # Runs before everything. Use it to start daemons etc.
-# pre: sudo /etc/rc.d/mysqld start
+pre:
+    - make environment
 
 # Runs in each window and pane before window/pane specific commands. Useful for setting up interpreter versions.
-# pre_window: rbenv shell 2.0.0-p247
+pre_window: source .env >> /dev/null 2>&1
 
 # Pass command line options to tmux. Useful for specifying a different tmux.conf.
 # tmux_options: -f ~/.tmux.mac.conf
@@ -18,7 +19,7 @@ tmux_options: -2
 # tmux_command: byobu
 
 # Specifies (by name or index) which window will be selected on project startup. If not set, the first window is used.
-# startup_window: logs
+startup_window: editor
 
 # Controls whether the tmux session should be attached to automatically. Defaults to true.
 # attach: false
@@ -32,28 +33,36 @@ windows:
       panes:
         - editor:
             - pyenv activate go-examples
+            - gvm pkgset use go-examples
             - <%= ENV["EDITOR"] %>
-        - vagrant:
+        - pwd:
             - pyenv activate go-examples
-        - database:
+            - gvm pkgset use go-examples
+        - pwd:
             - pyenv activate go-examples
+            - gvm pkgset use go-examples
   - python:
       layout: main-vertical
       panes:
         - python:
             - pyenv activate go-examples
+            - gvm pkgset use go-examples
             - ipython
   - databases:
       layout: main-vertical
       panes:
-        - postgresql:
+        - ls:
             - pyenv activate go-examples
-        - mysql:
+            - gvm pkgset use go-examples
+        - ls:
             - pyenv activate go-examples
-  - vagrant:
+            - gvm pkgset use go-examples
+  - docker:
       layout: main-vertical
       panes:
-        - code:
+        - ls:
             - pyenv activate go-examples
-        - vagrant:
+            - gvm pkgset use go-examples
+        - ls:
             - pyenv activate go-examples
+            - gvm pkgset use go-examples
