@@ -12,7 +12,7 @@ if [[ ! "${response}" -eq '0' ]]; then
     gvm pkgset create "${GVM_NAME}"
 fi
 
-gvm pkgset use "${GVM_NAME}"
+gvm pkgset use "${PROJECT_NAME}" >> /dev/null 2>&1
 
 mkdir -p "${GOPATH}/src"
 mkdir -p "${GOPATH}/pkg"

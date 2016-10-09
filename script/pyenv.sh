@@ -17,3 +17,5 @@ response=$?
 if [[ ! ${response} -eq '0' ]]; then
     pyenv virtualenv "${PYTHON_VERSION}" "${PYENV_NAME}" >> /dev/null 2>&1
 fi
+
+pyenv activate "${PROJECT_NAME}" >> /dev/null 2>&1
