@@ -5,4 +5,5 @@
 -/auto-save-list
 -*.cache
 -*.pyc
+-.wercker/*
 -projectile-bookmarks.eld
