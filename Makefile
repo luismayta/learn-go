@@ -38,7 +38,6 @@ distclean: clean
 environment:
 	$(PYENV)
 	$(GVM)
-	$(RVM)
 
 
 maintainer-clean: distclean
