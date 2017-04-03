@@ -1,0 +1,39 @@
+# Ventorystack: Docker Compose
+# https://docs.docker.com/compose/
+#
+# Usage: test up
+version: '3'
+services:
+
+  # PostgreSQL database
+  db_test:
+    restart: always
+    image: dgnest/postgres:9.6
+    environment:
+      - POSTGRES_USER=postgres
+      - POSTGRES_PASSWORD=postgres
+      - POSTGRES_DB=golang_test
+    env_file:
+      - .env
+    volumes:
+      - pgvolume-9.6-test:/var/lib/postgresql/data #using the declared volume
+
+  # Django web server
+  web:
+    environment: &environment
+      - BASE_URL=https://d31j0v1l1eefly.cloudfront.net/
+      - DB_URL=postgres://postgres:postgres@db:5432/golang
+      - DB_TEST_URL=postgres://postgres:postgres@db_test:5432/golang_test
+      - C_FORCE_ROOT=True
+      - MEDIA_URL=media/
+      - IS_SECURE=True
+      - DEBUG=True
+      - SECRET_KEY=j36%5df7q5+ov)wz+(=vt7d81ka^xx!5%0)nx=z2i&)*5r^
+      - STATIC_URL=static/
+    depends_on:
+      - db_test
+
+volumes:
+  pgvolume-9.6-test:
+    external:
+      name: golang-pgvolume-9-6-test
