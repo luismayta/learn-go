@@ -1,6 +1,6 @@
-# ~/.tmuxinator/go-examples.yml
-name: go-examples
-root: <%= ENV["PROJECTS"] %>/go/examples
+# ~/.tmuxinator/golang-examples.yml
+name: golang-examples
+root: <%= ENV["PROJECTS"] %>/go/golang-examples
 tmux_options: -2
 # Optional tmux socket
 # socket_name: foo
@@ -25,44 +25,44 @@ startup_window: editor
 # attach: false
 
 # Runs after everything. Use it to attach to tmux with custom options etc.
-# post: tmux -CC attach -t go-examples
+# post: tmux -CC attach -t golang-examples
 
 windows:
   - editor:
       layout: even-horizontal
       panes:
         - editor:
-            - pyenv activate go-examples
-            - gvm pkgset use go-examples
+            - pyenv activate golang-examples
+            - gvm pkgset use golang-examples
             - <%= ENV["EDITOR"] %>
         - pwd:
-            - pyenv activate go-examples
-            - gvm pkgset use go-examples
+            - pyenv activate golang-examples
+            - gvm pkgset use golang-examples
         - pwd:
-            - pyenv activate go-examples
-            - gvm pkgset use go-examples
+            - pyenv activate golang-examples
+            - gvm pkgset use golang-examples
   - python:
       layout: main-vertical
       panes:
         - python:
-            - pyenv activate go-examples
-            - gvm pkgset use go-examples
+            - pyenv activate golang-examples
+            - gvm pkgset use golang-examples
             - ipython
   - databases:
       layout: main-vertical
       panes:
         - ls:
-            - pyenv activate go-examples
-            - gvm pkgset use go-examples
+            - pyenv activate golang-examples
+            - gvm pkgset use golang-examples
         - ls:
-            - pyenv activate go-examples
-            - gvm pkgset use go-examples
+            - pyenv activate golang-examples
+            - gvm pkgset use golang-examples
   - docker:
       layout: main-vertical
       panes:
         - ls:
-            - pyenv activate go-examples
-            - gvm pkgset use go-examples
+            - pyenv activate golang-examples
+            - gvm pkgset use golang-examples
         - ls:
-            - pyenv activate go-examples
-            - gvm pkgset use go-examples
+            - pyenv activate golang-examples
+            - gvm pkgset use golang-examples
