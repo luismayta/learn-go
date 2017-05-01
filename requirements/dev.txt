@@ -1,6 +1,8 @@
 -r test.txt
 autoenv==1.0.0
 autopep8
+bumplus==0.0.8
+bumpversion==0.5.3
 docker==2.1.0
 docker-compose==1.11.2
 elpy
