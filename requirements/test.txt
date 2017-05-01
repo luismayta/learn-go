@@ -1,5 +1,4 @@
 -r ../requirements.txt
-ansible>=2.0.0
 fakeredis==0.8.2
 green==2.6.0
 mock==2.0.0
