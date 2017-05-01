@@ -10,7 +10,7 @@ pre:
     - make environment
 
 # Runs in each window and pane before window/pane specific commands. Useful for setting up interpreter versions.
-pre_window: source .env >> /dev/null 2>&1
+# pre_window: source .env >> /dev/null 2>&1
 
 # Pass command line options to tmux. Useful for specifying a different tmux.conf.
 # tmux_options: -f ~/.tmux.mac.conf
