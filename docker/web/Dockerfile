@@ -8,6 +8,15 @@ COPY ./glide.lock /go/src/golang-examples/
 # set working directory to /app/
 WORKDIR /go/src/golang-examples/
 
-# install golang dependencies
-RUN curl https://glide.sh/get | sh \
+RUN apt-get update \
+  && apt-get install -y zsh \
+  && go get -u github.com/alecthomas/gometalinter \
+  && gometalinter --install \
+  && go get -u github.com/nsf/gocode \
+  && go get -u golang.org/x/tools/cmd/goimports \
+  && go get -u github.com/dougm/goflymake \
+  && go get -u github.com/pengwynn/flint \
+  && go get -u github.com/rogpeppe/godef \
+  && go get -u github.com/golang/lint \
+  && curl https://glide.sh/get | sh \
   && glide install
