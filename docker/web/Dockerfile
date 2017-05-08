@@ -11,6 +11,7 @@ WORKDIR /go/src/golang-examples/
 RUN apt-get update \
   && apt-get install -y zsh \
   && go get -u github.com/alecthomas/gometalinter \
+  && gometalinter --install \
   && go get -u github.com/nsf/gocode \
   && go get -u golang.org/x/tools/cmd/goimports \
   && go get -u github.com/dougm/goflymake \
