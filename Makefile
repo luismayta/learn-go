@@ -14,11 +14,15 @@ CLEAN = $(shell) $(SCRIPT_DIR)/clean.sh
 GVM = $(shell) $(SCRIPT_DIR)/gvm.sh
 PYENV = $(shell) $(SCRIPT_DIR)/pyenv.sh
 INSTALL = $(shell) $(SCRIPT_DIR)/install.sh
+SETUP-GO = $(shell) $(SCRIPT_DIR)/setup-go.sh
 TEST = $(shell) $(SCRIPT_DIR)/test.sh
 LINGUIST = $(shell) $(SCRIPT_DIR)/linguist.sh
 
 install:
 	$(INSTALL)
+
+setup-go:
+	$(SETUP-GO)
 
 clean:
 	$(CLEAN)
