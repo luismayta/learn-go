@@ -1,6 +1,0 @@
--r ../requirements.txt
-fakeredis==0.8.2
-green==2.6.0
-mock==2.0.0
-PyHamcrest==1.9.0
-tox==2.4.1
