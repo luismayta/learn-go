@@ -1,6 +1,13 @@
 
-# Created by https://www.gitignore.io/api/go,python,node
-# Edit at https://www.gitignore.io/?templates=go,python,node
+# Created by https://www.gitignore.io/api/code,go,python,node
+# Edit at https://www.gitignore.io/?templates=code,go,python,node
+
+### Code ###
+.vscode/*
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
+!.vscode/extensions.json
 
 ### Go ###
 # Binaries for programs and plugins
@@ -219,4 +226,4 @@ dmypy.json
 # Pyre type checker
 .pyre/
 
-# End of https://www.gitignore.io/api/go,python,node
+# End of https://www.gitignore.io/api/code,go,python,node
