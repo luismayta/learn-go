@@ -1,22 +1,35 @@
-FROM equipindustry/python:3.8.0-slim
+FROM sphinxdoc/docker-ci
 
 MAINTAINER Luis Mayta <slovacus@gmail.com>
 
 ARG stage
 
-LABEL NAME golang-examples-app-$stage
+LABEL NAME golang-examples-doc
 
 ENV USERNAME developer
 
 ENV PACKAGES bash \
-  openssl
-
+  git \
+  gcc \
+  libc-dev \
+  make \
+  musl-dev \
+  openssl \
+  gcc \
+  libgdal20 \
+  libev-dev \
+  curl \
+  wget \
+  tar \
+  zsh \
+  jq
 
 COPY Pipfile* /usr/src/
 
 # set working directory to /usr/src/
 WORKDIR /usr/src/
 
+# install packages
 RUN apt-get update -y \
   && apt-get install -y ${PACKAGES} --no-install-recommends \
 
