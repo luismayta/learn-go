@@ -1,8 +1,0 @@
-package: .
-import:
-  - package: github.com/mattetti/goRailsYourself
-    subpackages:
-      - /crypto
-  - package: github.com/golang/lint
-    subpackages:
-      - /golint
