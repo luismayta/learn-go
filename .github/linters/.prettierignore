@@ -3,6 +3,11 @@
 .serverless_nextjs
 node_modules
 dist
-
+package.json
 package-lock.json
-dist/
+coverage
+.mypy_cache/
+.build
+.terraform
+*.tpl.md
+*.enc.yaml
