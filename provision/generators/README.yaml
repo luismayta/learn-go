@@ -1,0 +1,44 @@
+---
+#
+# This is the canonical configuration for the `README.md`
+# Run `make readme` to rebuild the `README.md`
+#
+
+# Name of this project
+name: learn-go
+
+email:
+  support: support@hadenlabs.com
+
+# Logo for this project
+#logo: docs/logo.png
+
+# License of this project
+license: 'LGPL-3.0'
+
+# Canonical GitHub repo
+github_repo: luismayta/learn-go
+
+# Badges to display
+badges:
+  - name: Lint
+    image: https://github.com/luismayta/learn-go/actions/workflows/lint.yml/badge.svg?branch=develop
+    url: https://github.com/luismayta/learn-go/actions
+  - name: Issues
+    image: https://img.shields.io/github/issues/luismayta/learn-go.svg
+    url: https://github.com/luismayta/learn-go/issues
+  - name: Latest Release
+    image: https://img.shields.io/github/release/luismayta/learn-go.svg
+    url: https://github.com/luismayta/learn-go/releases
+
+# Short description of this project
+description: |-
+  learn-go examples for go.
+
+requirements: |-
+
+  This is a list that need to be installed previously to enjoy all the goodies of this configuration:
+
+  * [golang](https://golang.org)
+
+usage: |
