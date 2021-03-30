@@ -1,5 +1,4 @@
-// Examples with iota
-package main
+package constant
 
 import (
 	"fmt"
@@ -24,7 +23,7 @@ const (
 	YB
 )
 
-func main() {
+func PrintIota() {
 	fmt.Println(pi)
 	fmt.Println(piTambien)
 	fmt.Println(igualApi)

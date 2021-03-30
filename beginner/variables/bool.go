@@ -1,5 +1,5 @@
 //-*- coding: utf-8 -*-
-package main
+package bevariables
 
 import "fmt"
 

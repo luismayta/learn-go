@@ -1,4 +1,4 @@
-package main
+package beginner
 
 import "fmt"
 
@@ -9,7 +9,7 @@ const (
 	StatusNotFound = 404
 )
 
-func main() {
+func PrintConstant() {
 	fmt.Println("Value Pi", Pi)
 	fmt.Println("Value StatusOk", StatusOk)
 	fmt.Println("Value StatusNotFound", StatusNotFound)
