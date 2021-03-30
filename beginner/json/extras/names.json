@@ -1,5 +1,5 @@
 [
-	{"Name": "Marcus", "City": "San Jose"},
-	{"Name": "Gopher", "City": "Bushwood"},
-	{"Name": "Goldy", "City": "Minnesota"}
+  { "Name": "Marcus", "City": "San Jose" },
+  { "Name": "Gopher", "City": "Bushwood" },
+  { "Name": "Goldy", "City": "Minnesota" }
 ]
