@@ -1,10 +1,8 @@
-FROM equipindustry/python:3.8.0-slim
-
-MAINTAINER Luis Mayta <slovacus@gmail.com>
+FROM hadenlabs/python:3.8.0-slim
 
 ARG stage
 
-LABEL NAME golang-examples-app-$stage
+LABEL NAME learn-go-app-$stage
 
 ENV USERNAME developer
 
@@ -31,7 +29,7 @@ RUN apt-get update -y \
 
 
 # pipenv
-  && pip3 install pipenv \
+  && pip3 install --no-cache-dir pipenv \
   && pipenv install --dev --skip-lock \
   && pipenv shell --fancy \
 
