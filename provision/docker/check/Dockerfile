@@ -1,9 +1,7 @@
-FROM equipindustry/python:3.8.0-slim
-
-MAINTAINER Luis Mayta <slovacus@gmail.com>
+FROM hadenlabs/python:3.8.0-slim
 
 ARG stage
-LABEL NAME golang-examples-check-$stage
+LABEL NAME learn-go-check-$stage
 
 COPY Pipfile* /usr/src/
 
@@ -16,7 +14,7 @@ RUN apt-get update -y \
   git-core \
   shellcheck \
   # install python dependencies
-  && pip3 install pipenv \
+  && pip3 install --no-cache-dir pipenv \
   && pipenv install --dev --skip-lock \
   && pipenv shell --fancy \
   && apt-get purge \
