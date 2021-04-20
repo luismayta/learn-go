@@ -14,7 +14,7 @@
 
 # learn-go
 
-[![Lint](https://github.com/luismayta/learn-go/actions/workflows/lint.yml/badge.svg?branch=develop)](https://github.com/luismayta/learn-go/actions) [![Issues](https://img.shields.io/github/issues/luismayta/learn-go.svg)](https://github.com/luismayta/learn-go/issues) [![Latest Release](https://img.shields.io/github/release/luismayta/learn-go.svg)](https://github.com/luismayta/learn-go/releases)
+[![GitHub tag (latest SemVer)](https://img.shields.io/github/v/tag/luismayta/learn-go.svg?label=latest&sort=semver)](https://github.com/luismayta/learn-go/releases) [![Lint](https://github.com/luismayta/learn-go/actions/workflows/lint.yml/badge.svg?branch=develop)](https://github.com/luismayta/learn-go/actions) [![Issues](https://img.shields.io/github/issues/luismayta/learn-go.svg)](https://github.com/luismayta/learn-go/issues) [![Latest Release](https://img.shields.io/github/release/luismayta/learn-go.svg)](https://github.com/luismayta/learn-go/releases)
 
 learn-go examples for go.
 
@@ -30,7 +30,7 @@ This is a list that need to be installed previously to enjoy all the goodies of 
 
 **Got a question?**
 
-File a GitHub [issue](https://github.com/luismayta/learn-go/issues), send us an [email](email) or join our [Slack Community](slack).
+File a GitHub [issue](https://github.com/luismayta/learn-go/issues).
 
 ## Contributing
 
@@ -50,9 +50,20 @@ In general, PRs are welcome. We follow the typical "fork-and-pull" Git workflow.
 
 **NOTE:** Be sure to rebase the latest changes from "upstream" before making a pull request!
 
-#### Versioning
+## Module Versioning
 
-Releases are managed using github release feature. We use [Semantic Versioning](http://semver.org) for all the releases. Every change made to the code base will be referred to in the release notes (except for cleanups and refactorings).
+This Module follows the principles of [Semantic Versioning (SemVer)](https://semver.org/).
+
+Using the given version number of `MAJOR.MINOR.PATCH`, we apply the following constructs:
+
+1. Use the `MAJOR` version for incompatible changes.
+1. Use the `MINOR` version when adding functionality in a backwards compatible manner.
+1. Use the `PATCH` version when introducing backwards compatible bug fixes.
+
+### Backwards compatibility in `0.0.z` and `0.y.z` version
+
+- In the context of initial development, backwards compatibility in versions `0.0.z` is **not guaranteed** when `z` is increased. (Initial development)
+- In the context of pre-release, backwards compatibility in versions `0.y.z` is **not guaranteed** when `y` is increased. (Pre-release)
 
 ## Copyright
 
