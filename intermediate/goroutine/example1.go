@@ -1,11 +1,13 @@
 package main
 
-import "fmt"
-import "time"
+import (
+	"fmt"
+	"time"
+)
 
-// test goroutine
+// test goroutine.
 func main() {
-	var message = "hello"
+	message := "hello"
 	go func() {
 		fmt.Println(message)
 	}()
