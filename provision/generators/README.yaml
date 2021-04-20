@@ -21,6 +21,9 @@ github_repo: luismayta/learn-go
 
 # Badges to display
 badges:
+  - name: GitHub tag (latest SemVer)
+    image: https://img.shields.io/github/v/tag/luismayta/learn-go.svg?label=latest&sort=semver
+    url: https://github.com/luismayta/learn-go/releases
   - name: Lint
     image: https://github.com/luismayta/learn-go/actions/workflows/lint.yml/badge.svg?branch=develop
     url: https://github.com/luismayta/learn-go/actions
