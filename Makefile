@@ -29,6 +29,7 @@ NODE_VERSION=14.15.5
 PYENV_NAME="${PROJECT}"
 GIT_IGNORES:=python,node,go,zsh
 GI:=gi
+GIT_IGNORES_CUSTOM:= bin
 
 # issues reviewers
 REVIEWERS?=luismayta
