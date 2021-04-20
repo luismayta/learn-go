@@ -7,5 +7,5 @@ import (
 )
 
 func main() {
-	fmt.Printf(greeting.Hello())
+	fmt.Printf(greeting.Hello()) //nolint
 }
