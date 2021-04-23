@@ -2,7 +2,6 @@
 # https://docs.docker.com/compose/
 
 services:
-  # Python
   app:
     environment: &environment
       - STAGE=local
