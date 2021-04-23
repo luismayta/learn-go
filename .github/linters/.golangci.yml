@@ -37,13 +37,6 @@ linters-settings:
     # tokens count to trigger issue, 150 by default
     threshold: 100
 
-  forbidigo:
-    # Forbid the following identifiers
-    forbid:
-      - fmt.Errorf # consider errors.Errorf in github.com/pkg/errors
-      - fmt.Print.* # too much log noise
-      - ginkgo\\.F.* # these are used just for local development
-
 linters:
   enable-all: true
   disable:

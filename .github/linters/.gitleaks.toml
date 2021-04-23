@@ -172,7 +172,6 @@ title = "gitleaks config"
       '''^\.gitignore$''',
       '''^\.gitleaks.toml$''',
       '''^yarn.lock$''',
-      '''^\.test.yml$''',
     ]
     commits = [
       '''a81642d5a5a5ef2b340d1f7b24f7aaa7a5db544b''',
@@ -183,11 +182,9 @@ title = "gitleaks config"
       '''d3646879c82a2d9598a475bc093200431581a411''',
     ]
 
-
 [whitelist]
 	description = "Ignore gitleaks config"
 	files = [
-    '''^\.test.yml$''',
     '''^\.gitleaks.toml$''',
     '''^\.gitignore$''',
     '''^yarn.lock$''',
