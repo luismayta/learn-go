@@ -1,15 +1,12 @@
-//-*- coding: utf-8 -*-
-package main
+package variables
 
 import (
 	"fmt"
 )
 
-var (
-	name = "itachi uchiha"
-)
+func getMessage() string {
+	name := "itachi uchiha"
 
-func main() {
 	message := fmt.Sprintf("Hello %s", name)
-	fmt.Println(message)
+	return message
 }

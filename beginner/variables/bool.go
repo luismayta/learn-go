@@ -1,10 +1,9 @@
-//-*- coding: utf-8 -*-
-package bevariables
+package variables
 
 import "fmt"
 
 func main() {
-	var casiQueSi = true
+	casiQueSi := true
 	var casiQueNo bool
 	fmt.Println("casiQueSi:", casiQueSi)
 	fmt.Println("casiQueNo:", casiQueNo)
