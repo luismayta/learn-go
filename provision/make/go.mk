@@ -8,7 +8,7 @@ GOBIN	= $(GOPATH)/bin
 GO_FILES = $(shell find ./ -type f -name '*.go' | grep -v '/vendor/' | sort -u)
 
 # Bin variables
-GOLANGCI-LINT = $(GOBIN)/golangci-lint
+GOLANGCI-LINT = $(GOBIN)/golangci-lint-${GOLANGCI_VERSION}
 
 ## show help commands
 .PHONY: go.help
@@ -31,23 +31,22 @@ go:
 		make go.help;\
 	fi
 
-bin/golangci-lint-${GOLANGCI_VERSION}:
+bin.golangci-lint:
 	@mkdir -p bin
-	[ ! -e "bin/golangci-lint" ] && curl -sfL https://install.goreleaser.com/github.com/golangci/golangci-lint.sh | BINARY=golangci-lint bash -s -- v${GOLANGCI_VERSION}
-	@mv bin/golangci-lint $@
-
-bin/golangci-lint: bin/golangci-lint-${GOLANGCI_VERSION}
-	@ln -sf golangci-lint-${GOLANGCI_VERSION} bin/golangci-lint
+	@if [ ! -e ${GOLANGCI-LINT} ]; then \
+		curl -sfL https://install.goreleaser.com/github.com/golangci/golangci-lint.sh | BINARY=golangci-lint bash -s -- v${GOLANGCI_VERSION}\
+		&& mv bin/golangci-lint ${GOLANGCI-LINT};\
+	fi
 
 ## Run linter go
 .PHONY: go.lint
-go.lint: bin/golangci-lint
-	bin/golangci-lint run --config .github/linters/.golangci.yml
+go.lint: bin.golangci-lint
+	@$(GOLANGCI-LINT) run --config .github/linters/.golangci.yml
 
 ## Fix lint violations
 .PHONY: go.fix
-go.fix: bin/golangci-lint
-	bin/golangci-lint run --fix --config .github/linters/.golangci.yml
+go.fix: bin.golangci-lint
+	@$(GOLANGCI-LINT) run --fix --config .github/linters/.golangci.yml
 
 ## Run go vet against code
 .PHONY: go.vet
