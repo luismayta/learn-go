@@ -26,10 +26,12 @@ PROJECT := learn-go
 
 PYTHON_VERSION=3.8.0
 NODE_VERSION=14.15.5
+GOLANGCI_VERSION ?= 1.38.0
+GORELEASER_VERSION ?= 0.159.0
 PYENV_NAME="${PROJECT}"
 GIT_IGNORES:=python,node,go,zsh
 GI:=gi
-GIT_IGNORES_CUSTOM:= bin
+GIT_IGNORES_CUSTOM:=bin
 
 # issues reviewers
 REVIEWERS?=luismayta
@@ -93,10 +95,10 @@ setup:
 	@echo "==> install packages..."
 	make python.setup
 	make python.precommit
-	make go.setup
 	@[ -e ".env" ] || cp -rf .env.example .env
 	make yarn.setup
 	make git.setup
+	make go.setup
 	@echo ${MESSAGE_HAPPY}
 
 ## setup environment of project
