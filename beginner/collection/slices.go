@@ -1,28 +1,25 @@
-package arrays
+package collection
 
 import "fmt"
 
-func PanicSlice() {
-	var eb = make([]string, 2, 5)
+func PanicSlice() []string {
+	eb := make([]string, 2, 5)
 	eb[0] = "Epi"
 	eb[1] = "Blas"
 	eb[2] = "Coco"
-	fmt.Println("Saludemos a:", eb)
+	return eb
 }
 
-func Example1() {
-	var eb = make([]string, 2, 5)
-	fmt.Println("Tamaño slice:   ", len(eb))
-	fmt.Println("Capacidad slice:", cap(eb))
-
-	var array [5]string
-	fmt.Println("Tamaño array:   ", len(array))
-	fmt.Println("Capacidad array:", cap(array))
+func Example1() (int, int) {
+	eb := make([]string, 2, 5)
+	return len(eb), cap(eb)
 }
 
 func Example2() {
-	var personajes = [...]string{"Chema", "Don-Pimpón",
-		"Espinete", "Caponata"}
+	personajes := [...]string{
+		"Chema", "Don-Pimpón",
+		"Espinete", "Caponata",
+	}
 	personas := personajes[:2]
 	preferidos := personajes[1:3]
 	animales := personajes[2:]
@@ -35,7 +32,7 @@ func Example2() {
 }
 
 func Example3() {
-	var personajes = [...]string{"Chema", "Don-Pimpón", "Espinete", "Caponata"}
+	personajes := [...]string{"Chema", "Don-Pimpón", "Espinete", "Caponata"}
 	personas := personajes[:2]
 	preferidos := personajes[1:3]
 	animales := personajes[2:]
@@ -52,7 +49,7 @@ func Example3() {
 }
 
 func Example4() {
-	var villanos = [...]string{"Darth-Vader", "Vizzini", "Célula"}
+	villanos := [...]string{"Darth-Vader", "Vizzini", "Célula"}
 
 	personajes := make([]string, 0, 5)
 	fmt.Println(personajes, len(personajes), cap(personajes))
@@ -74,15 +71,10 @@ func Example4() {
 	fmt.Println(personajes, len(personajes), cap(personajes))
 	fmt.Println(">", muchosPersonajes, len(muchosPersonajes),
 		cap(muchosPersonajes))
-
-	// personajes = append(personajes, "blancanieves", "Sabio",
-	// "Gruñon", "Mocoso", "Tímido", "Mudito", "Dormilón",
-	// "Feliz")
-	// fmt.Println(personajes, len(personajes), cap(personajes))
 }
 
 func Example5() {
-	var extraterrestres = [...]string{"Yuppi", "Karel", "Alf", "E.T."}
+	extraterrestres := [...]string{"Yuppi", "Karel", "Alf", "E.T."}
 	trozoExtraterrestres := make([]string, 3, 10)
 	copiados := copy(trozoExtraterrestres, extraterrestres[:])
 
@@ -92,7 +84,7 @@ func Example5() {
 }
 
 func Example6() {
-	var soloHola = make([]byte, 4)
+	soloHola := make([]byte, 4)
 	copy(soloHola, "Hola a todos")
 	fmt.Println(soloHola)
 }
