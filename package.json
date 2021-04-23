@@ -1,7 +1,7 @@
 {
   "name": "@luismayta/learn-go",
   "version": "0.0.0",
-  "description": "rvm for zsh plugin",
+  "description": "learn go code",
   "repository": "ssh://git@github.com/luismayta/learn-go.git",
   "author": "Luis Mayta <slovacus@gmail.com>",
   "license": "LGPL-3.0",
