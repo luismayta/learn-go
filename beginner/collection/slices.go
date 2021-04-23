@@ -7,11 +7,13 @@ func PanicSlice() []string {
 	eb[0] = "Epi"
 	eb[1] = "Blas"
 	eb[2] = "Coco"
+
 	return eb
 }
 
 func Example1() (int, int) {
 	eb := make([]string, 2, 5)
+
 	return len(eb), cap(eb)
 }
 
