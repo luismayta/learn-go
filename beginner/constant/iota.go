@@ -1,4 +1,4 @@
-package constant
+package beginner
 
 import (
 	"fmt"
@@ -8,7 +8,7 @@ const (
 	pi = 3.1416
 	A
 	piTambien
-	igualApi
+	igualAPI
 )
 
 const (
@@ -26,7 +26,7 @@ const (
 func PrintIota() {
 	fmt.Println(pi)
 	fmt.Println(piTambien)
-	fmt.Println(igualApi)
+	fmt.Println(igualAPI)
 	fmt.Println(KB)
 	fmt.Println(MB)
 	fmt.Println(GB)
