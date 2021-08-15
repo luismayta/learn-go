@@ -1,5 +1,4 @@
-github.com/go-basics/stringutils v0.0.0-20150205145713-90afbefe53bc/go.mod h1:nxEjeTlg4sPCUzNUTFWi7g/xqchO6oWQa5PAh9EKA8w=
-github.com/luismayta/hello_go v0.0.0-20200217101316-47d9fefaa146 h1:3XpoPgYSEfyMph6fY3K+obycOEKsXauaTETQDHuAf/o=
-github.com/luismayta/hello_go v0.0.0-20200217101316-47d9fefaa146/go.mod h1:X+hpg5YDtx7uLSkman5kx9qElLZvjZ/BgEGMxmH5ivE=
+github.com/luismayta/hello_go v0.0.0-20210815195112-fb82454222d2 h1:v0wPAG4yqeNuCBCHHAtR+E/XjIoCfP9gCXnnWQhzL6o=
+github.com/luismayta/hello_go v0.0.0-20210815195112-fb82454222d2/go.mod h1:3dFUz20qU5HTWrCnMQ91yEMDPiCiaGQLSd/0OInMo70=
 github.com/luismayta/stringutil v0.0.0-20160831071638-328e578f02a2 h1:hY0Ztn1/1URQ3WmF5jWkrN/DzI8zRE127rhcHXJmjUU=
 github.com/luismayta/stringutil v0.0.0-20160831071638-328e578f02a2/go.mod h1:3iaGrpMH3EF1gzd2NW4e4+s8Ic2bFbeKqHnQKUKLG5E=
