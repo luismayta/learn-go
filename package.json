@@ -51,7 +51,7 @@
     "prettier": "^2.3.2",
     "prettier-tslint": "^0.4.2",
     "rimraf": "^3.0.2",
-    "semantic-release": "^17.4.6",
+    "semantic-release": "^17.4.7",
     "shelljs": "^0.8.4",
     "stylelint": "^13.13.1",
     "stylelint-config-standard": "^22.0.0",
