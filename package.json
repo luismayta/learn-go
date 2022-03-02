@@ -56,7 +56,7 @@
     "stylelint": "^14.5.3",
     "stylelint-config-standard": "^25.0.0",
     "ts-node": "^10.6.0",
-    "typescript": "^4.5.5"
+    "typescript": "^4.6.2"
   },
   "publishConfig": {
     "access": "public"
