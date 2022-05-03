@@ -34,7 +34,7 @@
     "@babel/eslint-parser": "^7.17.0",
     "@commitlint/cli": "^16.2.4",
     "@hadenlabs/commitlint-config": "^0.1.0",
-    "@types/jest": "^27.4.1",
+    "@types/jest": "^27.5.0",
     "@types/mocha": "^9.1.1",
     "@typescript-eslint/eslint-plugin": "^5.22.0",
     "@typescript-eslint/parser": "^5.22.0",
