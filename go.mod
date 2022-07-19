@@ -2,4 +2,4 @@ module github.com/luismayta/learn-go
 
 go 1.16
 
-require github.com/luismayta/hello_go v0.0.0-20220715002010-b6a7b4c4888b
+require github.com/luismayta/hello_go v0.0.0-20220718214852-43f6740f01a9
