@@ -32,7 +32,7 @@
   "dependencies": {},
   "devDependencies": {
     "@babel/eslint-parser": "^7.19.1",
-    "@commitlint/cli": "^17.4.1",
+    "@commitlint/cli": "^17.4.2",
     "@hadenlabs/commitlint-config": "^0.1.0",
     "@types/jest": "^29.2.5",
     "@types/mocha": "^10.0.1",
