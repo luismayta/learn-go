@@ -1,4 +1,4 @@
-github.com/luismayta/hello_go v0.0.0-20230425101708-d82a64df4fbd h1:8L6zcWCEi2Va1fJtx634v7OhEIZ8kkRFppnQIvMH1uo=
-github.com/luismayta/hello_go v0.0.0-20230425101708-d82a64df4fbd/go.mod h1:Po6cBKmWtKtWHBqkj5exN1Pt3LGdaLZT5XiBGQmOd34=
+github.com/luismayta/hello_go v0.0.0-20230427022200-d615ca3fa8cd h1:tQK5zBo/tqa2fH/pRSC0GraPaLgEjg3ctxIK8euW5fY=
+github.com/luismayta/hello_go v0.0.0-20230427022200-d615ca3fa8cd/go.mod h1:Po6cBKmWtKtWHBqkj5exN1Pt3LGdaLZT5XiBGQmOd34=
 github.com/luismayta/stringutil v0.0.0-20160831071638-328e578f02a2 h1:hY0Ztn1/1URQ3WmF5jWkrN/DzI8zRE127rhcHXJmjUU=
 github.com/luismayta/stringutil v0.0.0-20160831071638-328e578f02a2/go.mod h1:3iaGrpMH3EF1gzd2NW4e4+s8Ic2bFbeKqHnQKUKLG5E=
