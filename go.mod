@@ -2,6 +2,6 @@ module github.com/luismayta/learn-go
 
 go 1.19
 
-require github.com/luismayta/hello_go v0.0.0-20230703222849-0affa83799a9
+require github.com/luismayta/hello_go v0.0.0-20230704190911-232a68797294
 
 require github.com/luismayta/stringutil v0.0.0-20160831071638-328e578f02a2 // indirect
