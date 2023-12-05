@@ -35,7 +35,7 @@
     "@commitlint/cli": "^18.4.3",
     "@hadenlabs/commitlint-config": "^0.1.0",
     "@types/jest": "^29.5.10",
-    "@types/mocha": "^10.0.4",
+    "@types/mocha": "^10.0.6",
     "@typescript-eslint/eslint-plugin": "^6.11.0",
     "@typescript-eslint/parser": "^6.11.0",
     "axios": "^1.6.2",
