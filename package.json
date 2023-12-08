@@ -55,7 +55,7 @@
     "shelljs": "^0.8.5",
     "stylelint": "^15.11.0",
     "stylelint-config-standard": "^34.0.0",
-    "ts-node": "^10.9.1",
+    "ts-node": "^10.9.2",
     "typescript": "^5.3.3"
   },
   "publishConfig": {
