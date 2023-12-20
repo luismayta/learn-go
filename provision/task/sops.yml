@@ -1,0 +1,56 @@
+version: "3"
+
+tasks:
+  check:
+    desc: Exist sops and dependences
+    run: once
+    deps:
+      - task: check:sops
+      - task: check:age
+      - task: check:vars
+
+  check:sops:
+    desc: Exist sops
+    run: once
+    preconditions:
+      - sh: command -v sops
+        msg: "Please Install sops"
+
+  check:age:
+    desc: Exist age
+    run: once
+    preconditions:
+      - sh: command -v age
+        msg: "Please Install age"
+
+  check:vars:
+    desc: Exist vars for sops
+    run: once
+    preconditions:
+      - sh: test -v SOPS_AGE_KEY_FILE
+        msg: "Please add var environment SOPS_AGE_KEY_FILE"
+      - sh: test -v KEYBASE_PROJECT_PATH
+        msg: "Please add var environment KEYBASE_PROJECT_PATH"
+
+  make:
+    desc: Make sops gen key.
+    run: once
+    deps:
+      - task: check
+      - task: environment
+    cmds:
+      - >-
+        age-keygen -o {{.SOPS_AGE_KEY_FILE}}
+    status:
+      - test -f {{.SOPS_AGE_KEY_FILE}}
+
+  environment:
+    desc: setup environment sops.
+    run: once
+    deps:
+      - task: check:sops
+    cmds:
+      - >-
+        mkdir -p {{.KEYBASE_PROJECT_PATH}}/age
+    status:
+      - test -d {{.KEYBASE_PROJECT_PATH}}/age

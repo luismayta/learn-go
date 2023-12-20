@@ -1,0 +1,174 @@
+version: "3"
+
+tasks:
+  check:
+    desc: Exist terragrunt and dependences
+    run: once
+    deps:
+      - task: check:terragrunt
+      - task: check:terraform
+
+  check:terragrunt:
+    desc: Exist Terragrunt
+    run: once
+    preconditions:
+      - sh: command -v terragrunt
+        msg: "Please Install terragrunt"
+
+  check:terraform:
+    desc: Exist Terraform
+    run: once
+    preconditions:
+      - sh: command -v terraform
+        msg: "Please Install terraform"
+
+  check:vars:
+    desc: Exist Terraform
+    run: once
+    preconditions:
+      - sh: test -v AWS_PROFILE_NAME
+        msg: "Please add var environment AWS_PROFILE_NAME"
+      - sh: test {{.AWS_PROFILE_NAME}} == {{.ORGANIZATION}}
+        msg: "Please load var environment AWS of {{.ORGANIZATION}}"
+
+  setup:
+    desc: install setup
+    run: once
+    deps:
+      - task: check
+    cmds:
+      - >-
+        tfenv install {{.TERRAFORM_VERSION}}
+      - >-
+        tfenv use {{.TERRAFORM_VERSION}}
+
+  environment:
+    desc: use version terraform
+    run: once
+    deps:
+      - task: check
+    cmds:
+      - >-
+        tfenv use {{.TERRAFORM_VERSION}}
+
+  import:
+    desc: import command terragrunt
+    run: once
+    deps:
+      - task: check
+    cmds:
+      - cmd: terragrunt import {{.COMMAND}} --terragrunt-working-dir {{.TERRAFORM_DIR}}/{{.REGION}}/{{.STAGE}} --terragrunt-source-update
+        vars:
+          REGION: us-east-1
+
+  state:
+    desc: state command terragrunt
+    run: once
+    deps:
+      - task: check
+    cmds:
+      - cmd: terragrunt state {{.COMMAND}} --terragrunt-working-dir {{.TERRAFORM_DIR}}/{{.REGION}}/{{.STAGE}} --terragrunt-source-update
+        vars:
+          REGION: us-east-1
+
+  module:
+    desc: module command terragrunt
+    run: once
+    deps:
+      - task: check
+    cmds:
+      - cmd: terragrunt {{.MODULE_COMMAND}} --terragrunt-working-dir {{.TERRAFORM_DIR}}/{{.REGION}}/{{.STAGE}} --terragrunt-source-update -target=module.{{.MODULE}}
+        vars:
+          REGION: us-east-1
+
+  module:destroy:
+    desc: module destroy command terragrunt
+    run: once
+    deps:
+      - task: check
+    cmds:
+      - cmd: terragrunt {{.MODULE_COMMAND}} --terragrunt-working-dir {{.TERRAFORM_DIR}}/{{.REGION}}/{{.STAGE}} --terragrunt-source-update -target=module.{{.MODULE}}
+        vars:
+          REGION: us-east-1
+          MODULE_COMMAND: destroy
+
+  module:apply:
+    desc: module apply command terragrunt
+    run: once
+    deps:
+      - task: check
+    cmds:
+      - cmd: terragrunt {{.MODULE_COMMAND}} --terragrunt-working-dir {{.TERRAFORM_DIR}}/{{.REGION}}/{{.STAGE}} --terragrunt-source-update -target=module.{{.MODULE}}
+        vars:
+          REGION: us-east-1
+          MODULE_COMMAND: apply
+
+  command:
+    desc: make command terragrunt
+    run: once
+    deps:
+      - task: check
+    cmds:
+      - cmd: terragrunt {{.TERRAGRUNT_COMMAND}} --terragrunt-working-dir {{.TERRAFORM_DIR}}/{{.REGION}}/{{.STAGE}} --terragrunt-source-update
+        vars:
+          REGION: us-east-1
+
+  init:
+    desc: make terragrunt init
+    run: once
+    deps:
+      - task: check
+    cmds:
+      - task: command
+        vars:
+          TERRAGRUNT_COMMAND: init
+
+  plan:
+    desc: make terragrunt plan
+    run: once
+    deps:
+      - task: check
+    cmds:
+      - task: command
+        vars:
+          TERRAGRUNT_COMMAND: plan
+
+  apply:
+    desc: make terragrunt apply
+    run: once
+    deps:
+      - task: check
+    cmds:
+      - task: command
+        vars:
+          TERRAGRUNT_COMMAND: apply
+
+  refresh:
+    desc: make terragrunt refresh
+    run: once
+    deps:
+      - task: check
+    cmds:
+      - task: command
+        vars:
+          TERRAGRUNT_COMMAND: refresh
+
+  destroy:
+    desc: make terragrunt destroy
+    run: once
+    deps:
+      - task: check
+    cmds:
+      - task: command
+        vars:
+          TERRAGRUNT_COMMAND: destroy
+
+  output:
+    desc: make terragrunt output
+    run: once
+    deps:
+      - task: command
+    cmds:
+      - task: make
+        vars:
+          TERRAGRUNT_COMMAND: output

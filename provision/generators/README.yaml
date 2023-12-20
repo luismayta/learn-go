@@ -14,34 +14,50 @@ email:
 #logo: docs/logo.png
 
 # License of this project
-license: 'LGPL-3.0'
+license: "LGPL-3.0"
 
 # Canonical GitHub repo
 github_repo: luismayta/learn-go
 
 # Badges to display
 badges:
-  - name: GitHub tag (latest SemVer)
-    image: https://img.shields.io/github/v/tag/luismayta/learn-go.svg?label=latest&sort=semver
+  - name: Latest Release
+    image: https://img.shields.io/github/release/luismayta/learn-go
     url: https://github.com/luismayta/learn-go/releases
   - name: Lint
-    image: https://github.com/luismayta/learn-go/actions/workflows/lint.yml/badge.svg?branch=develop
-    url: https://github.com/luismayta/learn-go/actions
-  - name: Issues
-    image: https://img.shields.io/github/issues/luismayta/learn-go.svg
-    url: https://github.com/luismayta/learn-go/issues
-  - name: Latest Release
-    image: https://img.shields.io/github/release/luismayta/learn-go.svg
-    url: https://github.com/luismayta/learn-go/releases
-
-# Short description of this project
-description: |-
-  learn-go examples for go.
+    image: https://img.shields.io/github/workflow/status/luismayta/learn-go/lint-code
+    url: https://github.com/luismayta/learn-go/actions?workflow=lint-code
+  - name: CI
+    image: https://img.shields.io/github/workflow/status/luismayta/learn-go/ci
+    url: https://github.com/luismayta/learn-go/actions?workflow=ci
+  - name: Test
+    image: https://img.shields.io/github/workflow/status/luismayta/learn-go/test
+    url: https://github.com/luismayta/learn-go/actions?workflow=test
+  - name: pre-commit
+    image: https://img.shields.io/badge/pre--commit-enabled-brightgreen?logo=pre-commit&logoColor=white
+    url: https://github.com/pre-commit/pre-commit
+  - name: Conventional Commits
+    image: https://img.shields.io/badge/Conventional%20Commits-1.0.0-yellow
+    url: https://conventionalcommits.org
+  - name: KeepAChangelog
+    image: https://img.shields.io/badge/changelog-Keep%20a%20Changelog%20v1.0.0-orange
+    url: https://keepachangelog.com
 
 requirements: |-
 
-  This is a list that need to be installed previously to enjoy all the goodies of this configuration:
+  This is a list of plugins that need to be installed previously to enjoy all the goodies of this configuration:
 
-  * [golang](https://golang.org)
+  - [gomplate](https://github.com/hairyhenderson/gomplate)
+  - [python](https://www.python.org)
+  - [taskfile](https://github.com/go-task/task)
 
-usage: |
+# Short description of this project
+description: |-
+
+  learn-go for project
+
+usages:
+  - docs/usage.md
+
+examples:
+  - "docs/examples/common.md"

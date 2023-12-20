@@ -1,0 +1,8 @@
+with-expecter: false
+outpkg: "mocks"
+
+packages:
+  github.com/luismayta/learn-go/v1/clients/bitwarden:
+    interfaces:
+      BWInterface:
+      ClientInterface:
