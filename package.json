@@ -6,7 +6,7 @@
   "author": "Luis Mayta <slovacus@gmail.com>",
   "license": "LGPL-3.0",
   "engines": {
-    "node": ">=v14.21.3"
+    "node": ">=16.20.2"
   },
   "keywords": [],
   "scripts": {
