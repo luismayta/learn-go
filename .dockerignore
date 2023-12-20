@@ -1,7 +1,5 @@
 .*
-!.gen
-!.goreleaser.yml
-!.golangci.yml
 !.coveragerc
 !.env
 !.pylintrc
+.venv
