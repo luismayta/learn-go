@@ -73,7 +73,8 @@ func Example4() {
 	personajes = append(personajes, villanos[:]...)
 	fmt.Println(personajes, len(personajes), cap(personajes))
 
-	muchosPersonajes := append(personajes, personajes[1:4]...)
+	personajes = append(personajes, personajes[1:4]...)
+	muchosPersonajes := personajes
 	personajes[1] = "Rumpelstiltskin"
 	fmt.Println(personajes, len(personajes), cap(personajes))
 	fmt.Println(">", muchosPersonajes, len(muchosPersonajes),

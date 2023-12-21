@@ -9,7 +9,8 @@ import (
 
 // Person Struct for example json.
 type Person struct {
-	Name, City string
+	Name string `json:"Name"`
+	City string `json:"City"`
 }
 
 func main() {
@@ -25,9 +26,9 @@ func main() {
 	}
 
 	fmt.Printf("Name: %v, City: %v\n", person.Name, person.City)
-	file, err := os.Open("./beginner/json/extras/names.json")
-	if err != nil {
-		fmt.Println("Error parsing json", err)
+	file, erra := os.Open("./beginner/json/extras/names.json")
+	if erra != nil {
+		fmt.Println("Error parsing json", erra)
 	}
 
 	scanner := bufio.NewScanner(file)
@@ -36,7 +37,11 @@ func main() {
 		fmt.Println("Error parsing json", err)
 	}
 
-	defer file.Close()
+	defer func() {
+		if errc := file.Close(); errc != nil {
+			fmt.Println("Wrong to close file:", errc)
+		}
+	}()
 
 	fmt.Println(people)
 

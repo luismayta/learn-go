@@ -5,10 +5,10 @@ import (
 )
 
 const (
-	pi = 3.1416
-	A
-	piTambien
-	igualAPI
+	pi        = 3.1416
+	A         = pi
+	piTambien = pi
+	igualAPI  = pi
 )
 
 const (

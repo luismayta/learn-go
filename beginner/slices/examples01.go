@@ -1,11 +1,11 @@
-package main
+package slices
 
 import (
 	"fmt"
 )
 
-func main() {
-	s := make([]string, 3)
+func example01() {
+	s := make([]string, 3, 10)
 	fmt.Println("emp:", s)
 	s[0] = "a"
 	s[1] = "b"
@@ -15,8 +15,7 @@ func main() {
 	fmt.Println("get:", s[2])
 	fmt.Println("len:", len(s))
 
-	s = append(s, "d")
-	s = append(s, "e", "f")
+	s = append(s, "d", "e", "f")
 	fmt.Println("apd:", s)
 
 	c := make([]string, len(s))

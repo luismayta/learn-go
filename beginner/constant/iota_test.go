@@ -7,6 +7,7 @@ import (
 )
 
 func TestIota(t *testing.T) {
-	assert.Equal(t, 3.1416, pi)
-	assert.Equal(t, 3.1416, igualAPI)
+	const epsilon = 1e-6
+	assert.InEpsilon(t, 3.1416, pi, epsilon)
+	assert.InEpsilon(t, 3.1416, igualAPI, epsilon)
 }
