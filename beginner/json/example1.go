@@ -1,9 +1,10 @@
 package main
 
 import (
+	"bufio"
 	"encoding/json"
 	"fmt"
-	"io/ioutil"
+	"os"
 )
 
 // Person Struct for example json.
@@ -24,14 +25,18 @@ func main() {
 	}
 
 	fmt.Printf("Name: %v, City: %v\n", person.Name, person.City)
-	file, err := ioutil.ReadFile("./beginner/json/extras/names.json")
+	file, err := os.Open("./beginner/json/extras/names.json")
 	if err != nil {
 		fmt.Println("Error parsing json", err)
 	}
 
-	if err := json.Unmarshal(file, &people); err != nil {
+	scanner := bufio.NewScanner(file)
+
+	if err := json.Unmarshal(scanner.Bytes(), &people); err != nil {
 		fmt.Println("Error parsing json", err)
 	}
+
+	defer file.Close()
 
 	fmt.Println(people)
 

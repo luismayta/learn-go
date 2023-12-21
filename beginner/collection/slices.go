@@ -1,12 +1,14 @@
 package collection
 
-import "fmt"
+import (
+	"fmt"
+)
 
 func PanicSlice() []string {
-	eb := make([]string, 2, 5)
-	eb[0] = "Epi"
-	eb[1] = "Blas"
-	eb[2] = "Coco"
+	eb := make([]string, 3, 5)
+	eb[0] = "One"
+	eb[1] = "Two"
+	eb[2] = "Three"
 
 	return eb
 }
@@ -17,10 +19,12 @@ func Example1() (int, int) {
 	return len(eb), cap(eb)
 }
 
-func Example2() {
+func Example2() []string {
 	personajes := [...]string{
-		"Chema", "Don-Pimpón",
-		"Espinete", "Caponata",
+		"Chema",
+		"Don-Pimpón",
+		"Espinete",
+		"Caponata",
 	}
 	personas := personajes[:2]
 	preferidos := personajes[1:3]
@@ -31,6 +35,7 @@ func Example2() {
 	fmt.Println("Preferidos:", preferidos)
 	fmt.Println("Animales  :", animales)
 	fmt.Println("Simpaticos:", simpaticos)
+	return personajes[:]
 }
 
 func Example3() {
@@ -85,8 +90,8 @@ func Example5() {
 	fmt.Println("Elementos copiados     :", copiados)
 }
 
-func Example6() {
+func Example6() string {
 	soloHola := make([]byte, 4)
 	copy(soloHola, "Hola a todos")
-	fmt.Println(soloHola)
+	return string(soloHola)
 }

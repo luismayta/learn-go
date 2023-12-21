@@ -5,7 +5,7 @@ import (
 )
 
 func getMessage() string {
-	name := "itachi uchiha"
+	name = "itachi uchiha"
 
 	message := fmt.Sprintf("Hello %s", name)
 

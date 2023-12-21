@@ -1,10 +1,15 @@
 package variables
 
-import "fmt"
+import (
+	"fmt"
+)
 
-func main() {
-	casiQueSi := true
-	var casiQueNo bool
+var casiQueSi bool
+var casiQueNo bool
+
+func init() {
+	casiQueSi = true
+	casiQueNo = false
 	fmt.Println("casiQueSi:", casiQueSi)
 	fmt.Println("casiQueNo:", casiQueNo)
 	fmt.Println("Sí  Y  No:", casiQueSi && casiQueNo)

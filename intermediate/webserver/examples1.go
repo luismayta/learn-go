@@ -1,22 +1,11 @@
-package main
+package webserver
 
 import (
 	"fmt"
-	"log"
 	"net/http"
 )
 
-func main() {
-	http.HandleFunc("/hello", helloRequest)
-	http.HandleFunc("/", getRequest)
-	http.HandleFunc("/rabbit", getRabbit)
-	port := ":5000"
-
-	log.Println("Listening on port", port)
-	log.Fatal(http.ListenAndServe(port, nil))
-}
-
-func helloRequest(w http.ResponseWriter, r *http.Request) {
+func helloRequest(w http.ResponseWriter, _ *http.Request) {
 	fmt.Fprint(w, "Hello World")
 }
 
@@ -25,6 +14,6 @@ func getRequest(w http.ResponseWriter, r *http.Request) {
 	http.ServeFile(w, r, fileRequest)
 }
 
-func getRabbit(w http.ResponseWriter, r *http.Request) {
+func getRabbit(w http.ResponseWriter, _ *http.Request) {
 	fmt.Fprint(w, "Rabbit Evil")
 }
