@@ -1,4 +1,4 @@
-package di
+package sample01
 
 type IMessage interface {
 	Value() string
