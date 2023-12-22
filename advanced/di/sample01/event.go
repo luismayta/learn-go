@@ -1,4 +1,4 @@
-package di
+package sample01
 
 import (
 	"log"

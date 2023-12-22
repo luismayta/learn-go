@@ -4,7 +4,7 @@
 //go:build !wireinject
 // +build !wireinject
 
-package di
+package sample01
 
 // Injectors from wire.go:
 
