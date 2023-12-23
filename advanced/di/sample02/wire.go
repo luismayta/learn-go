@@ -1,3 +1,6 @@
+//go:build wireinject
+// +build wireinject
+
 package sample02
 
 import (
@@ -7,7 +10,7 @@ import (
 	"github.com/luismayta/learn-go/advanced/di/sample02/service"
 )
 
-func InitializeUserService() service.UserService {
+func InitializeUserService() *service.UserServiceImpl {
 	wire.Build(repository.NewUserRepository,
 		service.NewUserServiceImpl)
 	return nil
