@@ -4,8 +4,8 @@ github.com/google/go-cmp v0.2.0/go.mod h1:oXzfMopK8JAjlY9xF4vHSVASa0yLyX7SntLO5a
 github.com/google/subcommands v1.2.0/go.mod h1:ZjhPrFU+Olkh9WazFPsl27BQ4UPiG37m3yTrtFlrHVk=
 github.com/google/wire v0.6.0 h1:HBkoIh4BdSxoyo9PveV8giw7ZsaBOvzWKfcg/6MrVwI=
 github.com/google/wire v0.6.0/go.mod h1:F4QhpQ9EDIdJ1Mbop/NZBRB+5yrR6qg3BnctaoUk6NA=
-github.com/luismayta/hello_go v0.0.0-20240820194643-187484db3076 h1:Yt1u6gn3nmaK9RwObgEZlhsnxxNZNHKBFUhNkAjvuFo=
-github.com/luismayta/hello_go v0.0.0-20240820194643-187484db3076/go.mod h1:Po6cBKmWtKtWHBqkj5exN1Pt3LGdaLZT5XiBGQmOd34=
+github.com/luismayta/hello_go v0.0.0-20240826115235-2607d61c2c6d h1:ZoSx8mGMWxNvq6wr8BlBD07wX3GDHvW2OAQimxLaNE8=
+github.com/luismayta/hello_go v0.0.0-20240826115235-2607d61c2c6d/go.mod h1:Po6cBKmWtKtWHBqkj5exN1Pt3LGdaLZT5XiBGQmOd34=
 github.com/luismayta/stringutil v0.0.0-20160831071638-328e578f02a2 h1:hY0Ztn1/1URQ3WmF5jWkrN/DzI8zRE127rhcHXJmjUU=
 github.com/luismayta/stringutil v0.0.0-20160831071638-328e578f02a2/go.mod h1:3iaGrpMH3EF1gzd2NW4e4+s8Ic2bFbeKqHnQKUKLG5E=
 github.com/pmezard/go-difflib v1.0.0 h1:4DBwDE0NGyQoBHbLQYPwSUPoCMWR5BEzIk/f1lZbAQM=
