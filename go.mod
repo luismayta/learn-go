@@ -4,7 +4,7 @@ go 1.21
 
 require (
 	github.com/google/wire v0.6.0
-	github.com/luismayta/hello_go v0.0.0-20240826115235-2607d61c2c6d
+	github.com/luismayta/hello_go v0.0.0-20240826225502-62586c77828e
 	github.com/stretchr/testify v1.9.0
 )
 
