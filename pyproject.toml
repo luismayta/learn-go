@@ -35,7 +35,7 @@ optional = true
 [tool.poetry.group.test.dependencies]
 mock = "^5.1.0"
 pytest-mock = "^3.11.1"
-pytest = "^7.4.0"
+pytest = "^8.0.0"
 pytest-cov = "^4.1.0"
 freezegun = "^1.2.2"
 responses = "^0.25.0"
